@@ -1,0 +1,66 @@
+/* Flipping component container */
+.flipping-component {
+  position: relative;
+  display: inline-block;
+  width: 40vw;
+  height: 100px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+/* Front content styles */
+.front-content,
+.back-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.6s ease;
+  backface-visibility: hidden; /* Hide the backface of the element */
+  border-radius: 8px;
+}
+
+.front-content {
+  background-color: white;
+  border: 2px solid blue;
+  color: blue;
+  z-index: 2;
+}
+
+/* Flipped back content styles */
+.back-content {
+  background-color: blue;
+  color: white;
+  transform: rotateY(180deg);
+  transform-origin: 50% 50%; /* Set the transform origin to center */
+  z-index: 1;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  list-style: disc;
+}
+
+/* Show back content on hover */
+.flipping-component:hover .front-content {
+  transform: rotateY(180deg);
+}
+
+.flipping-component:hover .back-content {
+  transform: rotateY(0);
+  opacity: 1;
+}
+
+/* Set back content visible when not hovering */
+.flipping-component:not(:hover) .back-content {
+  opacity: 1;
+}
+
+/* Set front content invisible when not hovering */
+.flipping-component:not(:hover) .front-content {
+  opacity: 1;
+}

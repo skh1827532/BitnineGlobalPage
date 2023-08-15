@@ -1,0 +1,23 @@
+/* TwoColumnTable.css */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: center; /* Center the text in each column */
+}
+
+.column-heading {
+  width: 40%;
+}
+
+/* Remove borders from the table */
+table,
+th,
+td {
+  border: none;
+}

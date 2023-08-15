@@ -1,0 +1,30 @@
+.social-icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Align icons to the right end */
+}
+
+.contact-text {
+  font-weight: normal;
+  margin-right: 10px;
+  transition: font-weight 0.2s;
+}
+
+.contact-text:hover {
+  font-weight: bold;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center; /* Vertically align icons with the "Contact" text */
+}
+
+.social-icons a {
+  margin-right: 10px;
+  font-size: 20px;
+  color: #fff;
+}
+
+.social-icons a:last-child {
+  margin-right: 0;
+}
